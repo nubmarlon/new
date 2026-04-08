@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seasonal Gift Shop</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">Seasonal Gift Shop</div>
+      <nav class="category-nav" id="category-nav"></nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn btn-outline" type="button" aria-label="Toggle theme">
+          Toggle Theme
+        </button>
+        <div class="auth-container">
+          <button id="auth-trigger" class="btn btn-primary" type="button">Login / Register</button>
+          <div id="auth-panel" class="auth-panel hidden">
+            <form id="auth-form" class="auth-form">
+              <h3 id="auth-title">Login</h3>
+              <input id="auth-email" type="email" placeholder="Email" required />
+              <input id="auth-password" type="password" placeholder="Password" required minlength="6" />
+              <button id="auth-submit" type="submit" class="btn btn-primary">Login</button>
+              <p class="switch-auth">
+                <span id="auth-switch-label">No account?</span>
+                <button id="auth-switch-mode" class="link-btn" type="button">Create one</button>
+              </p>
+              <p id="auth-message" class="message"></p>
+            </form>
+          </div>
+          <div id="user-info" class="user-info hidden">
+            <span id="user-email"></span>
+            <button id="logout-btn" class="btn btn-outline" type="button">Logout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="products-section">
+        <h1 id="category-title">All Products</h1>
+        <p class="subtitle">Find gifts for every season and special day.</p>
+        <div id="products-grid" class="products-grid"></div>
+      </section>
+
+      <aside class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+          <p>Subtotal: <strong id="cart-subtotal">$0.00</strong></p>
+          <div class="cart-buttons">
+            <button id="clear-cart-btn" class="btn btn-outline" type="button">Clear Cart</button>
+            <button id="checkout-btn" class="btn btn-primary" type="button">Checkout</button>
+          </div>
+        </div>
+        <p id="cart-message" class="message"></p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <small>Made with Firebase Free Plan - Auth + Firestore + Hosting</small>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
